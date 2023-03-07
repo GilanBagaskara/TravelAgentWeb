@@ -1,0 +1,377 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+	background-color: #f5f5f5;
+}
+.container{
+    display: flex;
+    margin: auto 15%;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+.flex-header{
+	display: flex;
+	border: 2px solid #f5f5f5;
+	padding: 30px;
+	margin-top: 20px;
+	background-color: white;
+}
+
+.logo{
+	flex-grow: 11;
+	margin-left: 40px;
+	font-weight: bold;
+}
+
+.nav-link{
+	flex-grow: 1;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+}
+
+.flex-main{
+	display: flex;
+    flex-direction: column;
+	padding: 50px;
+	background-color: white;
+	border-left: 2px solid #f5f5f5;
+	border-right: 2px solid #f5f5f5;
+	border-bottom: 2px solid #f5f5f5;
+}
+
+hero{
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+	font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+.title-deskrip{
+	font-size: 20px;
+    color: gray;
+	margin-bottom: 50px;
+}
+
+.main{
+	display: flex;
+	flex-direction: row;
+}
+
+.main-left{
+	width: 500px;
+	margin-left: 20px;
+}
+
+section{
+	display: flex;
+    flex-direction: column;
+}
+.picture{
+	width: 430px;
+    height: 300px;
+	border-radius: 15px;
+}
+
+article{
+	display: flex;
+    flex-direction: column;
+    padding: 20px 80px 20px 30px;
+	margin-bottom: 50px;
+}
+
+.coment{
+	font-size: 18px;
+    color: gray;
+    margin-bottom: 20px;
+	font-style: italic;
+}
+
+.contact{
+	display: flex;
+}
+
+.icon{
+	height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin-right: 20px;
+}
+
+.icon-deskrip{
+	margin-top: 5px;
+}
+.name{
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.job{
+	color: gray;
+	font-style: italic;
+}
+
+.offer{
+	display: flex;
+	flex-direction: column;
+}
+
+.offer-deskrip{
+	font-weight: bold;
+    padding-right: 50px;
+    font-size: 17px;
+	margin-bottom: 10px;
+}
+
+ol{
+	margin-left: 20px;
+    margin-top: 20px;
+	opacity: 50%;
+}
+
+li{
+	display: flex;
+    gap: 35px;
+    margin-bottom: 20px;
+}
+
+.numbering{
+	height: 40px;
+    width: 40px;
+    background-color: #bbb;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+}
+
+.num-deskrip{
+	width: 300px;
+}
+
+.main-right{
+	background-color: #f5f5f5;
+    width: 250px;
+	height: 450px;
+	padding: 40px;
+	margin-right: 20px;
+}
+
+.right-contact{
+	font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.right-deskrip{
+	margin-bottom: 50px;
+    color: gray;
+    margin-right: 20px;
+}
+
+form{
+	gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+	font-weight: bold;
+}
+
+input{
+	height: 35px;
+	border-radius: 5px;
+	border: solid 2px;	
+	border-color: #999;
+}
+
+select{
+	height: 40px;
+	border-radius: 5px;
+	border: solid 2px;	
+}
+
+select:required:invalid{
+	color: #999;
+}
+
+option{
+	color: #000;
+}
+
+.submit{
+	margin-top: 20px;
+	height: 40px;
+	background-color: 2f4f4f;
+}
+
+.package{
+    display: flex;
+	flex-direction: column;
+}
+
+.package-title{
+	font-size: 35px;
+	font-weight: bold;
+	align-items: center;
+    justify-content: center;
+	height: 130px;
+	display: flex;
+}
+
+.package-list{
+	background-color: white;
+    display: flex;
+    flex-direction: column;
+	border: 2px solid #f5f5f5;
+}
+
+.list-pack{
+	display: flex;
+    padding: 50px;
+	gap: 20px;
+}
+
+.list-desk{
+	display: flex;
+	gap: 20px;
+}
+
+.list-desk > img {
+	width: 50px;
+}
+
+.imgtrav{
+	border-radius: 100%;
+	width: 60px;
+}
+
+.list-title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.list-exp{
+	color: gray;
+    line-height: 150%;
+    font-size: 14px;
+}
+
+.argument{
+	background-color: white;
+	align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+	height: 300px;
+	border-left: 2px solid #f5f5f5;
+	border-right: 2px solid #f5f5f5;
+}
+
+.argu-her{
+	font-size: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    line-height: 90px;
+}
+
+.argu-desk{
+	width: 550px;
+	text-align: center;
+    line-height: 20px;
+    margin-bottom: 50px;
+}
+
+.argu-button{
+	height: 45px;
+    width: 220px;
+	margin-bottom: 40px;
+}
+
+.flex-footer{
+	padding: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+	background-color: white;
+	margin-bottom: 30px;
+	border: 2px solid #f5f5f5;
+}
+
+.footer-log{
+	font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-desk{
+	display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 1000px){
+	html{
+		font-size: 75%;
+	}
+
+	.main{
+		flex-direction: column;
+		align-items: center;
+		gap: 50px;
+	}
+}

@@ -10,20 +10,42 @@
         <nav class="flex-header">
             <div class="logo">Global Tours Lombok</div>
             <div class="nav-link">
-                <div class="nav">Home</div>
-                <div class="nav">Our Package</div>
-                <div class="nav">Call Us</div>
+                <div class="nav"><a href="#home">Home</a></div>
+                <div class="nav"><a href="#ourpackage">Our Package</a></div>
+                <div class="nav"><a href="#contactus">Call Us</a></div>
             </div>
             </nav>
-        <main class="flex-main">
-            <hero>
-                <div class="title">Your Trusted Travel Agent's</div>
-                <div class="title-deskrip">Your happines is our hapiness</div>
-            </hero>
+        <main class="flex-main" id="home">
+                <h1>Your Trusted Travel Agent's</h1>
+                <p class="hero">Your happines is our hapiness</p>
             <div class="main">
                 <section class="main-left">
-                    <div>
-                        <img src="../TravelAgentWeb/images/lombok.jpeg" class="picture">
+                    <div class="slideshow-flex">
+                        <div class="slidese fade">
+                            <div class="numbertext">1 / 5</div>    
+                            <img src="../images/kutamandalika.jpg" class="picture">
+                            <div class="text">Kuta Mandalika</div>
+                        </div>
+                        <div class="slidese fade">
+                            <div class="numbertext">2 / 5</div>    
+                            <img src="../images/bukitmerese.jpeg" class="picture">
+                            <div class="text">Bukit Merese</div>
+                        </div>
+                        <div class="slidese fade">
+                            <div class="numbertext">3 / 5</div>    
+                            <img src="../images/pantaipink.jpg" class="picture">
+                            <div class="text">Pantai Pink</div>
+                        </div>
+                        <div class="slidese fade">
+                            <div class="numbertext">4 / 5</div>    
+                            <img src="../images/gilitrawang.jpg" class="picture">
+                            <div class="text">Gili Island</div>
+                        </div>
+                        <div class="slidese fade">
+                            <div class="numbertext">5 / 5</div>    
+                            <img src="../images/tiukelep.jpg" class="picture">
+                            <div class="text">Tiu Kelep Waterfall</div>
+                        </div>
                     </div>
                     <article>
                         <p class="coment">"Liburan jadi menyenangkan bersama Travel Agentku."</p>
@@ -36,11 +58,11 @@
                         </div>
                     </article>
                     <div class="offer">
-                        <div class="offer-deskrip">
+                        <h2>
                             Use this space to provide users with more information
                             about your offer. Consider it a follow-up to your headline
                             and explain the benefits of your service or product
-                        </div>
+                        </h2>
                         <ol> 
                             <li>
                                <div class="numbering">1</div>
@@ -61,7 +83,7 @@
                         </ol>
                     </div>
                 </section>
-                <div class="main-right">
+                <div class="main-right" id="contactus">
                     <div class="right-contact">Contact Us</div>
                     <div class="right-deskrip">Sales akan menghubungi anda 1x24 Jam setelah data kami terima.</div>
                     <form>
@@ -81,7 +103,7 @@
                 </div>
             </div>
         </main>
-        <div class="package">
+        <div class="package" id="ourpackage">
             <div class="package-title">
                 <h1>Our Package</h1>
             </div>
@@ -151,7 +173,7 @@
             <p class="argu-desk">Suspendisse egestas rhoncus urna in bibendum. Donec urna neque, euismod sed
                 justo quis, convallis tincidunt risus. Phasellus fringilla odio ver erat fringilla,
             </p>
-            <button type="button" class="argu-button">CALL TO ACTION</button>
+            <button type="button" class="argu-button"><a href="#contactus">CALL TO ACTION</a></button>
         </div>
         <footer class="flex-footer">
             <p class="footer-log">Global Tours Lombok</p>
@@ -163,7 +185,22 @@
                 <p>2023</p>
                 <p>Moqups</p>
             </div>
-            
-        </footer>
+        </footer> 
+        <script>
+            let slideIndex = 0;
+            showSlides();
+    
+            function showSlides(){
+                let i;
+                let slides = document.getElementsByClassName("slidese");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                slides[slideIndex-1].style.display = "block";  
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
     </body>
 </html>

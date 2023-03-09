@@ -42,15 +42,25 @@ table {
 	border-spacing: 0;
 }
 
-body{
-	background-color: #f5f5f5;
+html{
+	scroll-behavior: smooth;
 }
+
+body{
+	background-color: #a9a9a9;
+}
+
+
+/* Container garis */
+
 .container{
     display: flex;
     margin: auto 15%;
 	flex-direction: column;
 	margin-top: 20px;
 }
+
+/*----> Header <-------*/
 
 .flex-header{
 	display: flex;
@@ -62,81 +72,137 @@ body{
 
 .logo{
 	flex-grow: 11;
-	margin-left: 40px;
 	font-weight: bold;
 }
 
 .nav-link{
 	flex-grow: 1;
 	display: flex;
-	gap: 20px;
+	gap: 10px;
 	justify-content: center;
+	align-items: center;
 }
+
+.nav-link a{
+	display: inline-block;
+	text-decoration: none;
+}
+
+/*------>Main<------*/
 
 .flex-main{
 	display: flex;
     flex-direction: column;
-	padding: 50px;
+	padding: 6%;
 	background-color: white;
 	border-left: 2px solid #f5f5f5;
 	border-right: 2px solid #f5f5f5;
 	border-bottom: 2px solid #f5f5f5;
 }
 
-hero{
-	align-items: center;
-    display: flex;
-    flex-direction: column;
+.flex-main h1{
+	font-size: 30px;
+    text-align: center;
+    font-weight: bold;
 }
 
-.title{
-	font-size: 35px;
-    font-weight: bold;
-    margin-bottom: 60px;
+.hero {
+	padding: 3% 0px;
+    text-align: center;
+    font-size: 18px;
+    color: gray;
 }
 
 .title-deskrip{
 	font-size: 20px;
     color: gray;
-	margin-bottom: 50px;
+	padding: 40px 0px;
 }
 
 .main{
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+	padding: 0px 3%
 }
 
+/*------>Kolom Kiri<------*/
+
 .main-left{
-	width: 500px;
-	margin-left: 20px;
+	width: 70%;
+	padding: 0px 5%
 }
 
 section{
 	display: flex;
     flex-direction: column;
 }
+
+.slideshow-flex{
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+
 .picture{
-	width: 430px;
-    height: 300px;
-	border-radius: 15px;
+	width: 100%;
+    height:300px;
+    border-radius: 15px;
+    object-fit: cover;}
+
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+.slidese{
+	display: none;
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
 }
 
 article{
 	display: flex;
     flex-direction: column;
-    padding: 20px 80px 20px 30px;
+    padding: 10px 20px;
 	margin-bottom: 50px;
 }
 
 .coment{
-	font-size: 18px;
     color: gray;
     margin-bottom: 20px;
 	font-style: italic;
+	padding:10px 0px;
+}
+
+.coment p{
+	text-align: justify;
 }
 
 .contact{
 	display: flex;
+	align-items: center;
 }
 
 .icon{
@@ -144,15 +210,19 @@ article{
     width: 50px;
     border-radius: 50%;
     background-color: #bbb;
-    margin-right: 20px;
 }
 
 .icon-deskrip{
-	margin-top: 5px;
+	padding: 10px 10px;
 }
-.name{
+
+.icon-deskrip p{
+	text-align: left;
+}
+.name {
 	margin-bottom: 5px;
 	font-weight: bold;
+	color: #000;
 }
 
 .job{
@@ -165,23 +235,21 @@ article{
 	flex-direction: column;
 }
 
-.offer-deskrip{
+.offer h2{
 	font-weight: bold;
-    padding-right: 50px;
-    font-size: 17px;
-	margin-bottom: 10px;
+    text-align: justify;
 }
 
 ol{
-	margin-left: 20px;
-    margin-top: 20px;
-	opacity: 50%;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 0px;
 }
 
 li{
 	display: flex;
-    gap: 35px;
-    margin-bottom: 20px;
+    padding: 10px 0px;
+	gap: 10px;
 }
 
 .numbering{
@@ -197,14 +265,16 @@ li{
 
 .num-deskrip{
 	width: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .main-right{
 	background-color: #f5f5f5;
-    width: 250px;
-	height: 450px;
+    width: 30%;
+	height: 50%;
 	padding: 40px;
-	margin-right: 20px;
 }
 
 .right-contact{
@@ -274,17 +344,17 @@ option{
     display: flex;
     flex-direction: column;
 	border: 2px solid #f5f5f5;
+	padding: 30px;
 }
 
 .list-pack{
 	display: flex;
-    padding: 50px;
-	gap: 20px;
 }
 
 .list-desk{
 	display: flex;
 	gap: 20px;
+	padding: 10px;
 }
 
 .list-desk > img {
@@ -299,13 +369,13 @@ option{
 .list-title{
     font-weight: bold;
     font-size: 20px;
-    margin-bottom: 15px;
 }
 
 .list-exp{
 	color: gray;
     line-height: 150%;
     font-size: 14px;
+	padding-top: 15px;
 }
 
 .argument{
@@ -314,31 +384,32 @@ option{
     justify-content: center;
     display: flex;
     flex-direction: column;
-	height: 300px;
 	border-left: 2px solid #f5f5f5;
 	border-right: 2px solid #f5f5f5;
+	padding: 30px 0px;
 }
 
 .argu-her{
 	font-size: 30px;
-    align-items: center;
     display: flex;
-    justify-content: center;
     font-weight: bold;
-    line-height: 90px;
+	text-align: center;
 }
 
 .argu-desk{
-	width: 550px;
+	padding: 20px 6%;
 	text-align: center;
     line-height: 20px;
-    margin-bottom: 50px;
 }
 
 .argu-button{
 	height: 45px;
     width: 220px;
-	margin-bottom: 40px;
+}
+
+.argu-button a{
+	display: inline-block;
+	text-decoration: none;
 }
 
 .flex-footer{
@@ -364,14 +435,50 @@ option{
     gap: 20px;
 }
 
-@media (max-width: 1000px){
+
+/*------->Responsive<---------*/
+@media (max-width: 1057px){
 	html{
-		font-size: 75%;
+		font-size: 80%;
+	}
+
+	.container{
+		margin: auto 5%;
+	}
+
+	.flex-header{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 15px;
+	}
+
+	.nav-link{
+		flex-direction: column;
 	}
 
 	.main{
 		flex-direction: column;
 		align-items: center;
-		gap: 50px;
+	}
+
+	.main-left{
+		width: 100%;
+	}
+
+	.main-right{
+		width: 80%;
+	}
+
+	.picture{
+		height: 200px
+	}
+
+	.num-deskrip{
+		width:80%;
+	}
+
+	.list-pack{
+		flex-direction: column;
 	}
 }

@@ -109,6 +109,7 @@ body{
     padding: 10px 20px;
 	text-align: center;
 	transition: 0.3s;
+	cursor: pointer;
 }
 
 .nav:hover{
@@ -346,6 +347,10 @@ select:required:invalid{
 	color: #999;
 }
 
+.submit{
+	cursor: pointer;
+}
+
 option{
 	color: #000;
 }
@@ -442,6 +447,7 @@ option{
     width: 220px;
 	color: #000;
 	border: solid black;
+	cursor: pointer;
 }
 
 .argu-button a{

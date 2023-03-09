@@ -97,13 +97,13 @@
                 <div class="main-right" id="contactus">
                     <div class="right-contact">Contact Us</div>
                     <div class="right-deskrip">Sales will contact you 1x24 hours after we receive the data.</div>
-                    <form>
-                        <label for="fname">Your Name:</label>
+                    <form name="contact" onsubmit="return formvalidation()">
+                        <label for="fname" id="fname">Your Name:</label>
                         <input type="text" id="fname" name="fname" placeholder="First and last name"><br>
-                        <label for="email">Email Address:</label>
+                        <label for="email" id="email">Email Address:</label>
                         <input type="email" id="email" name="email" placeholder="example@gmail.com"><br>
-                        <label for="destina">What are you interested in?</label>
-                        <select name="destina" id="destina" required>
+                        <label for="destina" id="destina">What are you interested in?</label>
+                        <select name="destina" id="destina">
                             <option value="" selected disabled hidden>Select option</option>
                             <option value="kutamanda">Kuta Mandalika</option>
                             <option value="giliisland">Gili Island</option>
@@ -196,7 +196,6 @@
         <script>
             let slideIndex = 0;
             showSlides();
-    
             function showSlides(){
                 let i;
                 let slides = document.getElementsByClassName("slidese");
@@ -207,6 +206,17 @@
                 if (slideIndex > slides.length) {slideIndex = 1}    
                 slides[slideIndex-1].style.display = "block";  
                 setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+
+            function formvalidation(){
+                var name = document.forms['contact']['fname'].value;
+                var email = document.forms['contact']['email'].value;
+                var seleect = document.forms['contact']['destina'].value;
+
+                if (name == "" || email == "" || seleect == "", "Select Option"){
+                    alert('Please fill the data first');
+                    return false;
+                }
             }
         </script>
     </body>
